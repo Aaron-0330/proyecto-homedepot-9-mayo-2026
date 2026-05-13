@@ -209,3 +209,36 @@ flutter:
 🔹 **Si el plan es aprobado**, el siguiente entregable será la **configuración inicial ejecutable**: `main.dart`, `app_theme.dart`, `firebase_options.dart` base y estructura de `AuthProvider` lista para conectar con Firebase.
 
 ¿Deseas ajustar algún detalle o procedemos directamente a la fase de código inicial?
+
+## prompt
+Actúa como Arquitecto de Software Senior especializado en Flutter/Dart y Firebase Cloud. Tu objetivo es generar un documento titulado "Plan de implantación proyecto V2 home depot" en formato Markdown, estrictamente procedural y arquitectónico.
+
+🔒 RESTRICCIONES ABSOLUTAS:
+- NO incluyas código de ningún tipo, EXCEPTO el bloque completo de `pubspec.yaml` y la estructura visual de carpetas (árbol de directorios).
+- Toda la información restante debe organizarse en TABLAS claras, concisas y estructuradas.
+- Excluye explícitamente: Firebase Analytics, Crashlytics, Performance, telemetría, monitoreo o cualquier configuración de producción.
+- El enfoque es desarrollo local, arquitectura base y trazabilidad técnica multiplataforma.
+
+🛠️ ESPECIFICACIONES TÉCNICAS OBLIGATORIAS:
+- Framework: Flutter + Dart
+- Plataformas: Android, Web, iOS, Windows
+- Base de datos: Firebase Firestore
+- Autenticación: Únicamente correo electrónico y contraseña
+- Gestión de estado: Provider (ChangeNotifier)
+- UI/UX: Material 3 adaptado. Paleta: Primario #F96302 (naranja), Secundario #FFFFFF (blanco), Primer plano texto #1A1A1A (principal) y #4A4A4A (secundario). Estados: Éxito #2E7D32, Error #C62828, Advertencia #F59E0B.
+- Estructura: Debe incluir obligatoriamente una carpeta `bin/` con scripts CLI de automatización (setup, build, debug, sync).
+- Entidades a mapear: cargo, tienda, empleado, categoria, proveedor, producto, inventario, cliente, pedido, detalle_pedido, pago, envio, lista_deseos. Conserva todos sus atributos originales y adapta la relación a colecciones/subcolecciones de Firestore.
+- Dependencias: Solo las necesarias para Auth, Firestore, Storage, Provider, UI, formularios, utilidades y entorno local. Excluye cualquier paquete de analíticas o producción.
+
+📋 FORMATO DE SALIDA REQUERIDO:
+Genera el documento usando EXACTAMENTE estas secciones en Markdown:
+1. 🎨 Tabla 1: Diseño UI/UX y Paleta de Colores (Primer Plano vs Fondo)
+2. 🌳 Estructura de Carpetas y Archivos (Representación visual tipo árbol, incluyendo `bin/`)
+3. 📦 Dependencias `pubspec.yaml` (Entregado como bloque de código YAML completo, con versiones ~2026 y configuración `flutter:` al final)
+4. 🗄️ Tabla 2: Mapeo de Entidades/Tablas y Atributos (SQL → Firestore)
+5. 🚀 Tabla 3: Plan de Implementación Paso a Paso (Fases 1-8)
+6. 🔁 Tabla 4: Gestión de Estado con Provider
+7. ✅ Validación y Siguientes Pasos
+
+⚠️ INSTRUCCIÓN FINAL:
+Antes de generar la respuesta, verifica internamente que NO exista ningún bloque de código adicional ni explicaciones fuera de las tablas solicitadas. El documento debe ser 100% procedural, arquitectónico y listo para servir como hoja de ruta oficial de desarrollo. Si cumples todas las restricciones, genera el plan completo ahora.
